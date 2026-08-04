@@ -25,8 +25,15 @@ onMounted(() => {
 <template>
   <a-extract-style>
     <a-config-provider :theme="themeConfig">
-      <AppSplashScreen v-if="isShowSplash" />
-      <NuxtLayout v-else>
+      <AppSplashScreen
+        :class="[
+          'transition-opacity duration-500 ease-in-out',
+          isShowSplash
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none',
+        ]"
+      />
+      <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
     </a-config-provider>
