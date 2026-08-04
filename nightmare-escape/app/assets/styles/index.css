@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import url(./lib.css);
 
-:root {
+@theme {
   --color-primary: #810ca8;
   --color-primary-hover: #950fc2;
   --color-primary-active: #6e0c8f;
@@ -13,7 +13,7 @@
   --color-warning: #faad14;
   --color-deleted: #948f8f;
   --border-radius: 6px;
-  --color-primary-active: #cfdbf3;
+  --color-primary-active-bg: #cfdbf3;
 }
 
 body {
